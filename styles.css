@@ -1,0 +1,138 @@
+:root {
+  --Grey-900: #141414;
+  --Grey-800: #1f1f1f;
+  --Grey-700: #333333;
+  --Green-highlight: #c4f82a;
+  --White: #ffffff;
+  --spacing-500: 4rem;
+  --spacing-300: 2.4rem;
+  --spacing-200: 1.6rem;
+  --spacing-150: 1.2rem;
+  --spacing-100: 0.8rem;
+  --spacing-50: 0.4rem;
+  --text-size-sm: 1.4rem;
+  --text-size-lg: 2.4rem;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("assets/fonts/static/Inter-Bold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("assets/fonts/static/Inter-SemiBold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("assets/fonts/static/Inter-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Inter";
+  background-color: var(--Grey-900);
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.profile-card {
+  border-radius: 1.2rem;
+  background-color: var(--Grey-800);
+  gap: var(--spacing-300);
+  height: 61.1rem;
+  width: 38.4rem;
+  padding: var(--spacing-500);
+}
+
+.profile-img {
+  height: 8.8rem;
+  width: 8.8rem;
+  border-radius: 99.9rem;
+}
+
+.profile-header {
+  gap: var(--spacing-50);
+}
+
+.profile-name {
+  font-size: var(--text-size-lg);
+  line-height: 1.5;
+  color: var(--White);
+  font-weight: 700;
+}
+
+.profile-location {
+  font-size: var(--text-size-sm);
+  color: var(--Green-highlight);
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.profile-bio {
+  color: var(--White);
+  font-size: var(--text-size-sm);
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.links-con {
+  gap: var(--spacing-200);
+  width: 100%;
+}
+.link-btn {
+  border-radius: 0.8rem;
+  font-size: var(--text-size-sm);
+  background-color: var(--Grey-700);
+  font-weight: 600;
+  color: var(--White);
+  border: none;
+  padding: 1.2rem;
+  display: block;
+  width: 100%;
+  height: 4.5rem;
+  font-family: "Inter";
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+.link-btn:hover {
+  background-color: var(--Green-highlight);
+  color: var(--Grey-700);
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: var(--spacing-300);
+  }
+  .profile-card {
+    height: 57.9rem;
+    width: 32.7rem;
+    padding: var(--spacing-300);
+  }
+}
